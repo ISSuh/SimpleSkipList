@@ -1,7 +1,7 @@
 # simpledb
 ## Overview
 Try implement distribute key value storage for study.
-Main storage use [LSM-tree based engine](https://github.com/ISSuh/lsm-tree) and [Raft implementation](https://github.com/ISSuh/raft) was used for distributed data management and processing.
+Main storage use LevelDB and [Raft implementation](https://github.com/ISSuh/raft) was used for distributed data management and processing.
 
 Under development project.
 
