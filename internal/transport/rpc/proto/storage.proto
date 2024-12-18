@@ -1,0 +1,34 @@
+﻿syntax = "proto3";
+
+package rpc;
+
+option go_package = "github.com/ISSuh/skvs/internal/transport/rpc/proto";
+
+message ping {
+}
+
+message pong {
+}
+
+message Key {
+    string key = 1;
+}
+
+message Value {
+    string value = 1;
+}
+
+message Request {
+    string value = 1;
+}
+
+message Response {
+    string value = 1;
+}
+
+service Storage {
+    rpc Heartbeat(ping) returns (pong) {}
+    rpc Get(Request) returns (Response) {}
+    rpc Set(Request) returns (Response) {}
+    rpc Delete(Request) returns (Response) {}
+}
